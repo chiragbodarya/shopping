@@ -1,13 +1,22 @@
 import React from "react";
-import Navbar from "./component/navbar";
+import "../src/App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import NavBar from "./component/navbar";
 
-function App() {
+const App = () => {
   return (
     <>
-      <Navbar />
-      <h1 className="text-red-800">Welcome to the Shopping App</h1>
+      <NavBar />
+      <div className="pt-[65px]">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+      </div>
     </>
   );
-}
+};
 
 export default App;
