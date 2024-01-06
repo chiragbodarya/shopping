@@ -1,15 +1,7 @@
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
-
-import "swiper/css";
-import "swiper/css/navigation";
-
-import { Navigation } from "swiper/modules";
+import React from "react";
 import ProductBox from "./comman/productbox";
 
-const newproduct = () => {
-
+const topselling = () => {
   const newproduct = [
     {
       id: 1,
@@ -81,46 +73,15 @@ const newproduct = () => {
   return (
     <>
       <p className="text-center text-[#000] capitalize font-bold text-[32px] pb-5">
-        New Product
+        top selling
       </p>
-      <Swiper
-        navigation={true}
-        slidesPerView={2.5}
-        spaceBetween={10}
-        breakpoints={{
-          640: {
-            slidesPerView: 3.5,
-            spaceBetween: 15,
-          },
-          768: {
-            slidesPerView: 4.5,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 5.5,
-            spaceBetween: 20,
-          },
-          1240: {
-            slidesPerView: 6.5,
-            spaceBetween: 20,
-          },
-        }}
-        modules={[Navigation]}
-        className="mySwiper"
-      >
+      <div className="grid grid-cols-6 grid-rows-2 gap-3">
         {newproduct.map((product) => (
-          <SwiperSlide key={product.id}>
-            <ProductBox product={product} />
-          </SwiperSlide>
+          <ProductBox key={product.id} product={product} />
         ))}
-        <SwiperSlide>
-          <Link to={"/"}>view all</Link>
-        </SwiperSlide>
-        <div className="swiper-button-next">left</div>
-        <div className="swiper-button-prev">sd</div>
-      </Swiper>
+      </div>
     </>
   );
 };
 
-export default newproduct;
+export default topselling;

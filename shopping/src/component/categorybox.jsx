@@ -32,7 +32,10 @@ const categorybox = () => {
     <>
       <div className="w-[100%] h-[40vh] flex items-center gap-2">
         {categorys.map((category) => (
-          <div key={category.id} className="w-auto hover:w-[60%] h-[100%]">
+          <div
+            key={category.id}
+            className="w-auto hover:w-[60%] hover:transition ease-in-out duration-700 h-[100%] cursor-pointer"
+          >
             <img
               src={category.img}
               alt={category.name}
