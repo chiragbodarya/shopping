@@ -1,7 +1,15 @@
 import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 const product = () => {
   const [number, setNumber] = useState(1);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const handleSubtract = () => {
     setNumber((prevNumber) => Math.max(prevNumber - 1, 0));
@@ -23,37 +31,127 @@ const product = () => {
   };
   return (
     <>
-      <div className="block md:flex justify-center gap-5 px-5 w-[100%] max-w-[1250px]">
-        <div className="">
-          <img src="/img/swiper_img_5.jpg" alt="" className="w-[100%]" />
+      <div className="block md:flex justify-center md:gap-5 lg:gap-7 xl:gap-10 px-5 w-[100%] max-w-[1250px] mx-auto">
+        <div className="w-[100%] md:w-[50%]">
+          {/* <img src="/img/swiper_img_5.jpg" alt="" className="w-[100%]" /> */}
+          <Swiper
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            loop={true}
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper2"
+          >
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            </SwiperSlide>
+          </Swiper>
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            loop={true}
+            spaceBetween={10}
+            slidesPerView={4}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            </SwiperSlide>
+          </Swiper>
         </div>
-        <div>
-          <p>lengha</p>
-          <p>pink gret lengha</p>
-          <div>
-            <span className="inline-block text-[20px] font-semibold text-[#000]">
-              $1234
-            </span>
-            <span className="inline-block text-[16px] font-semibold text-[#000] px-2 line-through decoration-red-900 decoration-2">
-              $4000
-            </span>
-            <span className="inline-block text-[20px] font-semibold text-[#000]">
-              60%
-            </span>
-            <span>in stock</span>
+        <div className="w-[100%] md:w-[50%]">
+          <p className="text-[18px] font-medium text-[#707070] uppercase">
+            lengha
+          </p>
+          <p className="text-[22px] font-bold capitalize pt-2">
+            pink gret lengha
+          </p>
+          <div className="flex justify-between pt-2">
+            <div className="gap-3 flex items-end">
+              <span className="inline-block text-[20px] font-semibold text-[#000]">
+                $1234
+              </span>
+              <span className="inline-block text-[16px] font-semibold text-[#707070] line-through decoration-red-900 decoration-2">
+                $4000
+              </span>
+              <span className="inline-block text-[20px] font-semibold text-[#000]">
+                60%
+              </span>
+            </div>
+            <p>( in stock )</p>
           </div>
-          <hr />
+          <p className="my-3 border-t-2 border-[#787878]" />
           <div>
-            <p>color</p>
-            <div className="flex items-center gap-5">
-              <p className="bg-red-800 rounded-full w-6 h-6"></p>
-              <p className="bg-blue-800 rounded-full w-6 h-6"></p>
-              <p className="bg-green-800 rounded-full w-6 h-6"></p>
+            <p className="text-[20px] text-semibold uppercase">color</p>
+            <div className="flex items-center gap-5 py-3">
+              <p className="bg-red-800 rounded-full w-10 h-10"></p>
+              <p className="bg-blue-800 rounded-full w-10 h-10"></p>
+              <p className="bg-green-800 rounded-full w-10 h-10"></p>
             </div>
           </div>
-          <hr />
+          <p className="my-3 border-t-2 border-[#787878]" />
           <div className="flex justify-between items-center">
-            <p>quantity</p>
+            <p className="text-[18px] capitalize">quantity</p>
             <div className="border-2 borde-[#000] flex items-center">
               <button onClick={handleSubtract} className="border-2">
                 -1
@@ -70,9 +168,9 @@ const product = () => {
               </button>
             </div>
           </div>
-          <div className="">
-            <button>add to cart</button>
-          </div>
+          <button className="w-[100%] bg-[#4F80E1] text-center py-3 mt-3 rounded-[5px] text-[#fff] capitalize font-semibold">
+            add to cart
+          </button>
           <div className="flex items-center gap-5">
             <p>no return</p>
             <p>online pyment</p>

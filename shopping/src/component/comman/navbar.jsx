@@ -17,7 +17,7 @@ const navbar = () => {
       <div className="flex items-center justify-between px-5 mx-4 max-[1250px]:mx-auto w-[100%] max-w-[1250px]">
         <div className="flex items-center justify-between w-[100%] space-x-4">
           <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] font-bold">
-            Bodary's
+            <a href="/">Bodary's</a>
           </div>
           <ul className="hidden md:flex items-center space-x-4 md:space-x-6">
             <li className="text-white text-[18px] font-semibold">Boy</li>
