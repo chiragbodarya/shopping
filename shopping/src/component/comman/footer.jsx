@@ -45,19 +45,19 @@ const footer = () => {
               <h3 className="text-lg font-semibold mb-2">Support</h3>
               <ul>
                 <li className="pt-2">
-                  <Link to={'/'} className="hover:text-gray-400">
+                  {/* <Link to={'/'} className="hover:text-gray-400"> */}
                     Contact Us
-                  </Link>
+                  {/* </Link> */}
                 </li>
                 <li className="pt-2">
-                  <Link to={'/'} className="hover:text-gray-400">
+                  {/* <Link to={'/'} className="hover:text-gray-400"> */}
                     Payment Options
-                  </Link>
+                  {/* </Link> */}
                 </li>
                 <li className="pt-2">
-                  <Link to={'/'} className="hover:text-gray-400">
+                  {/* <Link to={'/'} className="hover:text-gray-400"> */}
                     Policy
-                  </Link>
+                  {/* </Link> */}
                 </li>
               </ul>
             </div>

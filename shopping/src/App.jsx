@@ -2,6 +2,9 @@ import React from "react";
 import "../src/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
+import Login from "./pages/auth/login";
+import Registration from "./pages/auth/registration";
+import Product from './pages/product'
 import NavBar from "./component/comman/navbar";
 import Footer from "./component/comman/footer";
 
@@ -13,6 +16,9 @@ const App = () => {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/registration" element={<Registration />} />
+            <Route path="/product" element={<Product />} />
           </Routes>
         </Router>
       </div>
