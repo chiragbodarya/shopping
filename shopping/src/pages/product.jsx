@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaStar } from "react-icons/fa6";
+import { AiFillLike } from "react-icons/ai";
 
 const product = () => {
   const [number, setNumber] = useState(1);
@@ -131,7 +133,161 @@ const product = () => {
         </div>
       </div>
       <p className="my-7 border-t-2 border-[#787878]" />
-      <div></div>
+      <div className="block md:flex justify-between">
+        <div className="w-[100%]">
+          <p className="text-[24px] capitalize pb-2">over all retting</p>
+          <div className="flex items-end pb-8">
+            <FaStar className="text-[#FFFF33] h-[25px] w-[25px]" />
+            <p className="text-[22px] md:text-[28px] lg:text-[32px] font-bold pl-2">
+              4.8
+            </p>
+            <p className="pl-4">
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                30 out of 32(98%)
+              </p>
+              <p className="text-[14px] text-[#383838] font-semibold capitalize">
+                customer recommand this propduct
+              </p>
+            </p>
+          </div>
+          <div>
+            <div className="flex items-center gap-1">
+              <FaStar className="text-[#FFFF33] h-[25px] w-[25px]" />
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                5
+              </p>
+              <p className="bg-[#C8C8C8] rpunded-[20px] w-[70%] h-1 mx-2"></p>
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                23
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center gap-1">
+              <FaStar className="text-[#FFFF33] h-[25px] w-[25px]" />
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                4
+              </p>
+              <p className="bg-[#C8C8C8] rpunded-[20px] w-[70%] h-1 mx-2"></p>
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                10
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center gap-1">
+              <FaStar className="text-[#FFFF33] h-[25px] w-[25px]" />
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                3
+              </p>
+              <p className="bg-[#C8C8C8] rpunded-[20px] w-[70%] h-1 mx-2"></p>
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                4
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center gap-1">
+              <FaStar className="text-[#FFFF33] h-[25px] w-[25px]" />
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                2
+              </p>
+              <p className="bg-[#C8C8C8] rpunded-[20px] w-[70%] h-1 mx-2"></p>
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                0
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center gap-1">
+              <FaStar className="text-[#FFFF33] h-[25px] w-[25px]" />
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                1
+              </p>
+              <p className="bg-[#C8C8C8] rpunded-[20px] w-[70%] h-1 mx-2"></p>
+              <p className="text-[16px] text-[#202020] capitalize font-semibold">
+                0
+              </p>
+            </div>
+          </div>
+        </div>
+        <p className="w-0.5 bg-[#A9A9A9] hidden md:block mx-10"></p>
+        <div className="w-[100%] pt-5 md:pt-0">
+          <p className="text-[24px] capitalize pb-2">review this product</p>
+          <p className="flex gap-2 items-center">
+            <FaStar className="text-[#BEBEBE] h-[35px] w-[35px]" />
+            <FaStar className="text-[#BEBEBE] h-[35px] w-[35px]" />
+            <FaStar className="text-[#BEBEBE] h-[35px] w-[35px]" />
+            <FaStar className="text-[#BEBEBE] h-[35px] w-[35px]" />
+            <FaStar className="text-[#BEBEBE] h-[35px] w-[35px]" />
+          </p>
+          <div className="flex flex-col pt-5">
+            <label
+              htmlFor=""
+              className="text-[16px] text-[#202020] capitalize font-semibold"
+            >
+              best part of this product
+            </label>
+            <input
+              type="text"
+              className="border-2 border-[#696969] rounded-[2px]"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label
+              htmlFor=""
+              className="text-[16px] text-[#202020] capitalize font-semibold"
+            >
+              description
+            </label>
+            <textarea
+              name="description"
+              id=""
+              cols="10"
+              rows="5"
+              className="border-2 border-[#696969] rounded-[2px]"
+            ></textarea>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div>
+        <p className="text-[22px] md:text-[28px] lg:text-[32px] font-bold capitalize">
+          customer reviews
+        </p>
+        <div>
+          <p className="flex gap-2 items-center">
+            <FaStar className="text-[#FFFF33] h-[35px] w-[35px]" />
+            <FaStar className="text-[#FFFF33] h-[35px] w-[35px]" />
+            <FaStar className="text-[#FFFF33] h-[35px] w-[35px]" />
+            <FaStar className="text-[#FFFF33] h-[35px] w-[35px]" />
+            <FaStar className="text-[#FFFF33] h-[35px] w-[35px]" />
+          </p>
+          <p className="text-[28px] text-[#181818] capitalize font-semibold">
+            review title
+          </p>
+          <p className="pt-3">
+            <span className="text-[22px] text-[#202020] capitalize font-semibold">
+              use name
+            </span>
+            <span className="text-[16px] text-[#383838] font-semibold pl-4">
+              30 july 2023
+            </span>
+          </p>
+          <p className="text-[16px] text-[#383838] font-semibold pb-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
+            minus eum accusamus nostrum, totam magni aliquid, laudantium ea
+            porro reiciendis quae, sint dolorem distinctio velit dicta magnam
+            facere id voluptatem quasi error esse eveniet.
+          </p>
+          <p className="flex items-center">
+            <AiFillLike className="text-[#383838] w-[30px] h-[30px]" />
+            <span className="text-[16px] text-[#383838] font-semibold pl-4">
+              12 person
+            </span>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
