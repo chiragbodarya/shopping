@@ -1,15 +1,7 @@
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 const product = () => {
   const [number, setNumber] = useState(1);
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const handleSubtract = () => {
     setNumber((prevNumber) => Math.max(prevNumber - 1, 0));
@@ -30,94 +22,10 @@ const product = () => {
     setActiveTab(tabName);
   };
   return (
-    <>
-      <div className="block md:flex justify-center md:gap-5 lg:gap-7 xl:gap-10 px-5 w-[100%] max-w-[1250px] mx-auto">
+    <div className="w-[100%] max-w-[1250px] mx-auto p-5">
+      <div className="block md:flex justify-center md:gap-5 lg:gap-7 xl:gap-10">
         <div className="w-[100%] md:w-[50%]">
-          {/* <img src="/img/swiper_img_5.jpg" alt="" className="w-[100%]" /> */}
-          <Swiper
-            style={{
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            }}
-            loop={true}
-            spaceBetween={10}
-            navigation={true}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper2"
-          >
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-            </SwiperSlide>
-          </Swiper>
-          <Swiper
-            onSwiper={setThumbsSwiper}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={4}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-            </SwiperSlide>
-          </Swiper>
+          <img src="/img/swiper_img_5.jpg" alt="" className="w-[100%]" />
         </div>
         <div className="w-[100%] md:w-[50%]">
           <p className="text-[18px] font-medium text-[#707070] uppercase">
@@ -181,7 +89,7 @@ const product = () => {
         <div className="flex border-b">
           <button
             onClick={() => handleTabClick("description")}
-            className={`px-4 py-2 ${
+            className={`px-4 py-2 capitalize ${
               activeTab === "description" ? "border-b-2 border-blue-500" : ""
             }`}
           >
@@ -189,18 +97,29 @@ const product = () => {
           </button>
           <button
             onClick={() => handleTabClick("policy")}
-            className={`px-4 py-2 ${
+            className={`px-4 py-2 capitalize ${
               activeTab === "policy" ? "border-b-2 border-blue-500" : ""
             }`}
           >
-            Policy
+            Shopping & return
           </button>
         </div>
         <div className="mt-4">
           {activeTab === "description" && (
             <div>
               {/* Content for the Description tab */}
-              <p>Description content goes here.</p>
+              <p className="text-[18px] py-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                eligendi illo neque dignissimos nisi libero laboriosam cum sed
+                autem. Officia?
+              </p>
+              <ul className="list-outside list-disc">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+              </ul>
             </div>
           )}
           {activeTab === "policy" && (
@@ -211,8 +130,9 @@ const product = () => {
           )}
         </div>
       </div>
+      <p className="my-7 border-t-2 border-[#787878]" />
       <div></div>
-    </>
+    </div>
   );
 };
 

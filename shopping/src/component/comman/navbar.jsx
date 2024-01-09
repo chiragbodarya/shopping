@@ -4,6 +4,7 @@ import { IoBagOutline } from "react-icons/io5";
 import { IoNotifications } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { IoMenu } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -20,6 +21,7 @@ const navbar = () => {
             <a href="/">Bodary's</a>
           </div>
           <ul className="hidden md:flex items-center space-x-4 md:space-x-6">
+            {/* <Link to="/your-route">Link Text</Link> */}
             <li className="text-white text-[18px] font-semibold">Boy</li>
             <li className="text-white text-[18px] font-semibold">Girl</li>
             <li className="text-white text-[18px] font-semibold">Kid</li>
