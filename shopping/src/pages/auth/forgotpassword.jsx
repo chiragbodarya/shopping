@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "../../App.css";
 
-const login = () => {
+const forgotpassword = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add your form submission logic here
@@ -31,22 +31,11 @@ const login = () => {
                 placeholder="Enter email/mobile number"
                 className="p-4 mx-4 mb-3 rounded border-none bg-[#1F2937] text-white placeholder-gray-500 w-[100%]"
               />
-              <input
-                type="password"
-                placeholder="Enter password"
-                className=" p-4 mx-4 rounded border-none bg-[#1F2937] text-white placeholder-gray-500 w-[100%]"
-              />
-              <Link
-                to={"/forgotpassword"}
-                className="text-[20px] text-[#fff] text-right w-[100%] px-5"
-              >
-                Forgot your password
-              </Link>
               <button
                 type="submit"
                 className="bg-[#4F80E1] text-[#000000] text-[22px] p-3 mt-10 rounded border-none text-white cursor-pointer w-[100%] capitalize"
               >
-                Submit
+                sand otp
               </button>
               <Link
                 to={"/registration"}
@@ -62,4 +51,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default forgotpassword;

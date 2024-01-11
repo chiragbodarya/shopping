@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Extera from "./pages/extera";
 import Login from "./pages/auth/login";
 import Registration from "./pages/auth/registration";
+import ForGotPassword from "./pages/auth/forgotpassword";
 import Product from './pages/product'
 import Search from "./pages/search";
 import NavBar from "./component/comman/navbar";
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/forgotpassword" element={<ForGotPassword />} />
             <Route path="/product" element={<Product />} />
             <Route path="/search" element={<Search />} />
             <Route path="/extera" element={<Extera />} />

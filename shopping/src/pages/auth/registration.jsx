@@ -65,7 +65,7 @@ const registration = () => {
 
                   <button
                     type="submit"
-                    className="bg-[#4F80E1] text-[#000000] text-[22px] p-3 mt-10 rounded border-none text-white cursor-pointer w-[100%]"
+                    className="bg-[#4F80E1] text-[#000000] text-[22px] p-3 mt-10 rounded border-none text-white cursor-pointer w-[100%] capitalize"
                   >
                     Submit
                   </button>
