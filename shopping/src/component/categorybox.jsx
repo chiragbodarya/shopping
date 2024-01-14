@@ -34,13 +34,19 @@ const categorybox = () => {
         {categorys.map((category) => (
           <div
             key={category.id}
-            className="w-auto hover:w-[60%] hover:transition ease-in-out duration-700 h-[100%] cursor-pointer"
+            className="relative w-auto hover:w-[60%] hover:transition ease-in-out duration-700 h-[100%] cursor-pointer"
           >
-            <img
-              src={category.img}
-              alt={category.name}
-              className="w-[100%] h-[100%]"
-            />
+            <div className="w-[100%] h-[100%]">
+              <img
+                src={category.img}
+                alt={category.name}
+                className="w-[100%] h-[100%]"
+              />
+            </div>
+            <p className="absolute bottom-0 w-[100%] h-[100%] hover:h-max p-5 bg-[#707070] opacity-80">
+              <p className="font-black text-[20px] text-slate-800">woman</p>
+              <p className="font-black text-[20px] text-slate-800">langha</p>
+            </p>
           </div>
         ))}
       </div>
