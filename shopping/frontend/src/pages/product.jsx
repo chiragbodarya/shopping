@@ -1,23 +1,9 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import { AiFillLike } from "react-icons/ai";
+import Quantitybox from "../component/quantitybox"
 
 const product = () => {
-  const [number, setNumber] = useState(1);
-
-  const handleSubtract = () => {
-    setNumber((prevNumber) => Math.max(prevNumber - 1, 0));
-  };
-
-  const handleAdd = () => {
-    setNumber((prevNumber) => prevNumber + 1);
-  };
-
-  const handleChange = (event) => {
-    const inputValue = Number(event.target.value);
-    setNumber(isNaN(inputValue) ? 0 : Math.max(inputValue, 0));
-  };
-
   const [activeTab, setActiveTab] = useState("description");
 
   const handleTabClick = (tabName) => {
@@ -62,21 +48,7 @@ const product = () => {
           <p className="my-3 border-t-2 border-[#787878]" />
           <div className="flex justify-between items-center">
             <p className="text-[18px] capitalize">quantity</p>
-            <div className="border-2 borde-[#000] flex items-center">
-              <button onClick={handleSubtract} className="border-2">
-                -1
-              </button>
-              <input
-                type="number"
-                value={number}
-                onChange={handleChange}
-                pattern="[0-9]{5}"
-                className="border-2"
-              />
-              <button onClick={handleAdd} className="border-2">
-                +1
-              </button>
-            </div>
+            <Quantitybox />
           </div>
           <button className="w-[100%] bg-[#4F80E1] text-center py-3 mt-3 rounded-[5px] text-[#fff] capitalize font-semibold">
             add to cart
@@ -230,7 +202,7 @@ const product = () => {
             </label>
             <input
               type="text"
-              className="border-2 border-[#696969] rounded-[2px]"
+              className="border-2 border-[#696969] rounded-[2px] p-1"
             />
           </div>
           <div className="flex flex-col">
@@ -245,12 +217,13 @@ const product = () => {
               id=""
               cols="10"
               rows="5"
-              className="border-2 border-[#696969] rounded-[2px]"
+              className="border-2 border-[#696969] rounded-[2px] p-1"
             ></textarea>
           </div>
         </div>
         <div></div>
       </div>
+      <p className="my-7 border-t-2 border-[#787878]" />
       <div>
         <p className="text-[22px] md:text-[28px] lg:text-[32px] font-bold capitalize">
           customer reviews

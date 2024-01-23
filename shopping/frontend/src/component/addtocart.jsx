@@ -1,5 +1,6 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
+import Quantitybox from "../component/quantitybox";
 
 const addtocart = () => {
   return (
@@ -7,7 +8,7 @@ const addtocart = () => {
       <div>
         <div className="flex justify-between items-center mx-4 py-4">
           <div>
-            <span className="text-[28px] font-bold capitalize">
+            <span className="text-[28px] text-[#0f2757] font-bold capitalize">
               shopping bag
             </span>
             <span className="text-[18px] text-[#696969] ml-3">
@@ -30,6 +31,12 @@ const addtocart = () => {
                 <p className="inline-block text-[20px] font-semibold text-[#4F80E1]">
                   $123
                 </p>
+                <div className="flex justify-between items-center">
+                  <Quantitybox />
+                  <button className="text-capitalize text-[16px] p-1 border-2 border-[#595959]">
+                    romove
+                  </button>
+                </div>
               </div>
             </div>
             <p className="border-t-2 border-[#000] my-4" />
