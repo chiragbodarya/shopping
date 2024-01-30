@@ -1,4 +1,3 @@
-import { NavbarLink } from "flowbite-react";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -12,9 +11,13 @@ const Navbar = () => {
     <nav className="fixed w-full h-[60px] bg-gray-800">
       <div className="container mx-auto h-full">
         <div className="flex justify-between items-center px-5 sm:px-10 md:px-14 lg:px-16 xl:px-20 h-full">
-          <p className="text-[20px] font-bold capitalize">shopping</p>
+          <p className="text-[20px] text-[#fff] font-bold capitalize">
+            shopping
+          </p>
           <div className="flex items-center gap-5">
-            <p className="capitalize text-[15px] font-swemibold">use name</p>
+            <p className="capitalize text-[#fff] text-[15px] font-swemibold">
+              use name
+            </p>
             <div className="relative">
               <button
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-300 focus:outline-none"
