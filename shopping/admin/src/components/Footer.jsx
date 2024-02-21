@@ -12,8 +12,8 @@ const Footer = () => {
             <span>. All Rights Reserved.</span>
           </div>
           <div className="flex items-center gap-5">
-            {/* <Link to='/'>home</Link> */}
-            <p>Shopping</p>
+            <Link to='/'>home</Link>
+            <Link to='/'>Shopping</Link>
           </div>
         </div>
       </div>
